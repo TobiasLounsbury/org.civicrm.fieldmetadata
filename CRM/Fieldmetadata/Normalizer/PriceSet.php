@@ -32,7 +32,7 @@ class CRM_Fieldmetadata_Normalizer_PriceSet extends CRM_Fieldmetadata_Normalizer
           $field["label"] = $priceField['label'];
           $field["name"] = "price_". $priceField['id'];
           $field["order"] = $priceField['weight'];
-          $field["required"] = $priceField['is_required'];
+          $field["required"] = ($priceField['is_required'] == 1);
           $field["defaultValue"] = "";
           $field["preText"] = CRM_Utils_Array::value("help_pre", $priceField, "");
           $field["postText"] = CRM_Utils_Array::value("help_post", $priceField, "");
