@@ -9,6 +9,7 @@
       templateUrl: '~/crmFieldMetadata/crmRenderText.html',
       controller: ['$scope', function crmRenderTextController($scope) {
         $scope.formatMoney = CRM.formatMoney;
+        $scope.field.required = ($scope.field.required == 1);
       }]
     };
   });
